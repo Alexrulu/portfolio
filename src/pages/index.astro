@@ -1,16 +1,234 @@
 ---
+import '../styles/global.css';
+
+const stack = [
+	{name:'Nextjs', img:'nextjs.svg'},
+	{name:'Astro', img:'astro.svg'},
+	{name:'React', img:'react.svg'},
+	{name:'TypeScript', img:'typescript.svg'},
+	{name:'Python', img:'python.svg'},
+	{name:'Tailwind', img:'tailwind.svg'},
+	{name:'Motion', img:'motion.avif'},
+	{name:'Threejs', img:'threejs.ico'},
+	{name:'Nodejs', img:'nodejs.svg'},
+	{name:'Expressjs', img:'express.png'},
+	{name:'MySQL', img:'mysql.svg'},
+	{name:'Supabase', img:'supabase.png'},
+	{name:'Git', img:'git.svg'},
+	{name:'English', img:'english.svg'},
+	{name:'Spanish', img:'spanish.svg'}
+]
 
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Alexandro Lucero</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body class="bg-black text-text font-poppins p-4 flex flex-col overflow-x-hidden relative my-5 sm:px-[10vw] md:px-[20vw]
+	               lg:flex-row lg:px-[10vw] lg:gap-20 xl:px-[20vw] lg:my-10 lg:scroll-mt-10" id="stack">
+		<div class="parallax-bg"/>
+		<div class="hidden lg:block lg:w-2/5"/>
+		<div id="cursor-glow" class="hidden lg:block pointer-events-none fixed w-160 h-160 rounded-full bg-violet/10 opacity-35 blur-3xl -z-10"></div>
+
+		<!-- principal -->
+		<div class="flex flex-col gap-4 lg:fixed lg:w-[20vw]">
+		  <div class="flex gap-2 items-center lg:col-start-1">
+		  	<h1 class="text-5xl text-title">Alexandro Lucero</h1>
+		  	<img src="cv-photo.png" class="h-20 rounded-full border shadow-md bg-black shadow-black border-border/30" alt="profile-picture">
+		  </div>
+		  <h2 class="text-xl text-lime-neon lg:col-start-1">FullStack Developer</h2>
+		  <h3 class="text-lg break-keep lg:col-start-1">Versatile in building dynamic, high performance web apps with fullstack capability.</h3>
+  
+		  <!-- web-socials -->
+		  <div class="flex gap-3 lg:col-start-1">
+		  	<a href="https://github.com/Alexrulu" target="_blank" 
+				  class="bg-black p-2 rounded-full shadow-md shadow-black border border-border/30 hover:bg-surface hover:scale-110 duration-200">
+		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+				</a>
+		  	<a href="https://www.linkedin.com/in/alexandrolucero/" target="_blank" 
+				  class="bg-black p-2 rounded-full shadow-md shadow-black border border-border/30 hover:bg-surface hover:scale-110 duration-200">
+		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+				</a>
+		  	<a href="https://www.instagram.com/alexrulu/" target="_blank" 
+				  class="bg-black p-2 rounded-full shadow-md shadow-black border border-border/30 hover:bg-surface hover:scale-110 duration-200">
+		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+				</a>
+		  </div>
+		  <div class="flex gap-2 cursor-pointer relative lg:col-start-1 group duration-200 mr-auto" id="copy-email">
+		  	<p class="text-title group-hover:text-lime-neon duration-200" id="email-text">alexandro71000@gmail.com</p>
+		  	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy-icon lucide-copy group-hover:text-lime-neon duration-200"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+		    <p class="absolute -bottom-10 translate-x-45 opacity-0 duration-300 bg-surface rounded-xl px-2 py-0.5" id="copy-message">Copied!</p>
+		  </div>
+			<div class="hidden lg:flex flex-col gap-3 text-xl mt-10 mr-auto">
+				<a class="text-left text-title cursor-pointer hover:text-lime-neon duration-200" href="#stack">-- Stack</a>
+				<a class="text-left text-title cursor-pointer hover:text-lime-neon duration-200" href="#projects">-- Projects</a>
+				<a class="text-left text-title cursor-pointer hover:text-lime-neon duration-200" href="#contact-form">-- Contact</a>
+			</div>
+		</div>
+
+		<!-- stack -->
+		 <div class="flex flex-col gap-4 lg:w-3/5">
+		  <p class="text-lime-neon mt-20 text-xl lg:col-start-2 lg:row-start-1 lg:mt-0">Stack</p>
+		  <div class="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 text-xs lg:col-start-2 lg:row-start-2 xl:grid-cols-[1fr_1fr_1fr_1fr_1fr]">
+		  	{stack.map((item) => (
+		  		<article class="w-full text-title flex flex-col items-center gap-2 py-2 bg-black rounded-xl shadow-md shadow-black border border-border/30 group overflow-hidden relative">
+		  			<img src={item.img} class="w-10 h-10 rounded lg:scale-130 lg:translate-y-3 group-hover:translate-y-0 group-hover:scale-100 duration-300" alt={item.name}/>
+		  		  <span class="lg:opacity-0 group-hover:opacity-100 duration-200 cursor-default">{item.name}</span>
+						<span class="absolute -translate-y-12 group-hover:translate-y-0 duration-300 h-30 bg-white/10 z-10 w-40 rotate-30 -top-20 -right-20"/>
+		  		</article>
+		  	))}
+      </div>
+  
+		  <!-- my projects -->
+		  <p class="text-lime-neon mt-20 text-xl lg:scroll-mt-16" id="projects">Projects</p>
+		  <p class="text-title">KEY TO DREAM (Remake)</p>
+		  <div class="flex justify-between items-center">
+		  	<p>May 2025 (1 month of work)</p>
+		  	<a href="https://github.com/Alexrulu/keytodream2" target="_blank" 
+				  class="bg-surface rounded-xl py-1 px-2 flex gap-1 text-title hover:text-lime-neon duration-200">
+		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+		  		Repo
+		  	</a>
+		  </div>
+			<a href="https://keytodream.vercel.app/" target="_blank">
+		    <img src="keytodream.png" class="w-full rounded-xl lg:brightness-50 hover:brightness-100 duration-300 cursor-pointer" alt="keytodream project">
+			</a>
+		  <div class="flex flex-wrap gap-2">
+		  	{['React', 'Tailwind', 'Motion', 'Threejs', 'Expressjs', 'Nodejs', 'MySQL', 'Git'].map((item) => (
+		  		<span class="bg-black px-2 rounded-xl border border-border/30 shadow-md shadow-black py-0.5 text-title cursor-default">{item}</span>
+		  	))}
+		  </div>
+		  <p>
+		  	Key to Dream is a full-stack web app built for the final presentation of a one-year development course. I rebuilt it from scratch with advanced tools like Tailwind Motion and Three.js to enhance its design and performance. It includes full CRUD and showcases both my core skills and extra initiative.
+		  </p>
+  
+		  <p class="text-title mt-10">KEY TO DREAM</p>
+		  <div class="flex justify-between items-center">
+		  	<p>Nov 2024 (7 month of work)</p>
+		  	<a href="https://github.com/Alexrulu/alexandroLucero_KeyToDreamSB2" target="_blank" 
+				  class="bg-surface rounded-xl py-1 px-2 flex gap-1 text-title hover:text-lime-neon duration-200">
+		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+		  		Repo
+		  	</a>
+		  </div>
+			<a href="">
+		  <img src="keytodreamOld.png" class="w-full rounded-xl lg:brightness-50 hover:brightness-100 duration-300 cursor-pointer" alt="keytodream project">
+		  </a>
+		  <div class="flex flex-wrap gap-2">
+		  	{['Html', 'CSS', 'JS', 'Expressjs', 'Nodejs', 'MySQL', 'Git'].map((item) => (
+		  		<span class="bg-black px-2 rounded-xl border border-border/30 shadow-md shadow-black py-0.5 text-title cursor-default">{item}</span>
+		  	))}
+		  </div>
+		  <p>
+		  	The original Key to Dream was built with HTML, CSS, and vanilla JS while I was learning to code. Though fully functional, it had over 1,000 inline CSS classes and poor optimization, making it hard to maintain. After finishing the course early, I rebuilt it from scratch into the improved full-stack version.
+		  </p>
+  
+		  <!-- contact -->
+		  <form class="bg-black/50 flex flex-col gap-3 border border-border/30 shadow-md shadow-black rounded-xl p-4 mt-20 lg:scroll-mt-16 lg:gap-5"
+		           id="contact-form"
+           action="https://formspree.io/f/mqaqovyp"
+           method="POST">
+        <p class="text-lime-neon text-xl">Contact</p>
+        <div class="flex w-full gap-3 justify-between">
+          <div class="w-1/2 flex flex-col gap-2">
+            <p class="text-sm">First name *</p>
+            <input class="bg-surface border border-border rounded-lg w-full py-1 px-2 outline-none" 
+		  			 placeholder="First name" type="text" name="First name" required>
+          </div>
+          <div class="w-1/2 flex flex-col gap-2">
+            <p class="text-sm">Last name</p>
+            <input class="bg-surface border border-border rounded-lg w-full py-1 px-2 outline-none" 
+		  			 placeholder="Last Name" type="text" name="Last name">
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="text-sm">Email *</p>
+          <input class="bg-surface border border-border rounded-lg w-full py-1 px-2 outline-none" 
+		  		 placeholder="Email" type="email" name="Email" required>
+        </div>
+        <div class="flex flex-col gap-2">
+          <p class="text-sm">How can I help you? *</p>
+          <textarea class="bg-surface border border-border rounded-lg w-full py-1 px-2 outline-none" 
+		  		    placeholder="Feel free to outline your ideas or needs..." maxlength="500" name="message" required></textarea>
+        </div>
+        <button type="submit" class="bg-white rounded-lg text-black py-2 cursor-pointer active:translate-y-2 duration-100">Submit</button>
+      </form>
+		  <p id="form-status" class="hidden text-lime-neon py-2 mt-2 text-center bg-black/50 border border-border/30 shadow-md shadow-black rounded-xl">asd</p>
+		</div>
+
+		<!-- cursor glow -->
+		<script is:inline>
+      const glow = document.getElementById('cursor-glow');
+    
+      window.addEventListener('mousemove', (e) => {
+        glow.style.left = `${e.clientX - glow.offsetWidth / 2}px`;
+        glow.style.top = `${e.clientY - glow.offsetHeight / 2}px`;
+      });
+    </script>
+
+		<!-- no redirect from formspree script -->
+		 <script type="module">
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const action = form.action;
+        try {
+          const response = await fetch(action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          if (response.ok) {
+            status.textContent = "Message sent successfully! Thank you.";
+            status.classList.remove('hidden');
+            form.reset();
+          } else {
+            status.textContent = "Oops! There was a problem sending your message.";
+            status.classList.remove('hidden');
+          }
+        } catch (error) {
+          status.textContent = "Network error. Please try again later.";
+          status.classList.remove('hidden');
+        }
+      });
+    </script>
+
+		<!-- copy email script -->
+		<script type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        const copyContainer = document.getElementById("copy-email");
+        const emailTextEl = document.getElementById("email-text");
+        const copyMsg = document.getElementById("copy-message");
+        if (!copyContainer || !emailTextEl) return;
+        copyContainer.addEventListener("click", async () => {
+          const email = emailTextEl.textContent;
+          if (!email) return;
+          try {
+            await navigator.clipboard.writeText(email);
+            if (copyMsg) {
+              copyMsg.classList.remove("opacity-0");
+              copyMsg.classList.add("opacity-100");
+              setTimeout(() => {
+                copyMsg.classList.remove("opacity-100");
+                copyMsg.classList.add("opacity-0");
+              }, 2000);
+            }
+          } catch (err) {
+            console.error("Failed to copy email:", err);
+          }
+        });
+      });
+    </script>
 	</body>
+	
 </html>
