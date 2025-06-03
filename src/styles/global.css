@@ -24,10 +24,10 @@ html {
 
 .parallax-bg {
   position: fixed;
-  top: 0;
+  top: -30px;
   left: -15px;
   width: 200%;
-  height: 250%;
+  height: 200%;
   z-index: 0;
   background: radial-gradient(circle at 30% 30%, #7f00ff33, transparent 40%),
               radial-gradient(circle at 70% 70%, #00c3ff33, transparent 40%),
