@@ -6,42 +6,19 @@
   --font-poppins: 'Poppins', sans-serif;
   --color-title: #F1EDF7;
   --color-text: #AFA9BD;
-  --color-violet: #A259FF;
-  --color-violet-light: #CBA6FF;
-  --color-lime-neon: #C1FF00;
+  --color-yellow-neon: gold;
   --color-surface: #1A1A22;
   --color-border: #2E2A3A;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0
 }
 
 ::selection {
-  background-color: #C1FF00; /* Color de fondo personalizado */
+  background-color: gold; /* Color de fondo personalizado */
   color: #000000; /* Color del texto durante la selección */
 }
-
-.parallax-bg {
-  position: fixed;
-  top: -30px;
-  left: -100px;
-  width: 200%;
-  height: 200%;
-  z-index: 0;
-  background: radial-gradient(circle at 30% 30%, #7f00ff33, transparent 90%),
-              radial-gradient(circle at 70% 70%, #00c3ff33, transparent 60%),
-              radial-gradient(circle at 50% 50%, #ff00cc22, transparent 80%);
-  animation: moveBg 20s linear infinite;
-  transform: translateZ(0); /* performance fix */
-  background-blend-mode: screen;
-  opacity: 0.5;
-}
-
-@keyframes moveBg {
-  0% { transform: translate(-5%, -5%) scale(1); }
-  50% { transform: translate(5%, 5%) scale(1.05); }
-  100% { transform: translate(-5%, -5%) scale(1); }
-}
-
 
