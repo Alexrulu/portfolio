@@ -4,6 +4,7 @@ import '../styles/global.css';
 import profilePicture from '../assets/ProfilePicture.png';
 import keytodream from '../assets/keytodream.png';
 import Starfield from "../components/Starfield.jsx";
+import forit from '../assets/for-it-logo.png';
 
 const stack = [
 	{name:'React', img:'react.svg'},
@@ -84,43 +85,83 @@ const stack = [
 		</div>
 
 		<!-- stack -->
-		 <div class="flex flex-col gap-4 p-5 my-5 sm:px-[10vw] md:px-[20vw] lg:pt-10 lg:pb-10 lg:w-3/5 lg:px-[10vw] xl:pr-[20vw]">
-		  <p class="text-yellow-neon mt-20 text-xl lg:col-start-2 lg:row-start-1 lg:mt-0 italic">Stack</p>
-		  <div class="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 text-xs lg:col-start-2 lg:row-start-2 xl:grid-cols-[1fr_1fr_1fr_1fr_1fr]">
-		  	{stack.map((item) => (
-		  		<article class="w-full text-title flex flex-col items-center gap-2 py-2 bg-black rounded-xl shadow-md shadow-black border border-border/30 group overflow-hidden relative">
-		  			<img src={item.img} class="w-10 h-10 rounded lg:scale-130 lg:translate-y-3 group-hover:translate-y-0 group-hover:scale-100 duration-300" alt={item.name}/>
-		  		  <span class="lg:opacity-0 group-hover:opacity-100 duration-200 cursor-default">{item.name}</span>
-						<span class="absolute -translate-y-12 group-hover:translate-y-0 duration-300 h-30 bg-white/10 z-10 w-40 rotate-30 -top-20 -right-20"/>
-		  		</article>
-		  	))}
-      </div>
+		 <div class="flex flex-col gap-15 p-5 my-5 sm:px-[10vw] md:px-[20vw] lg:pt-10 lg:pb-10 lg:w-3/5 lg:px-[10vw] xl:pr-[20vw]">
+			<div class="flex flex-col gap-3 bg-black/50 p-4 backdrop-blur-sm rounded-xl shadow-md shadow-black/50">
+		    <p class="text-yellow-neon text-xl lg:col-start-2 lg:row-start-1 lg:mt-0 italic">Stack</p>
+		    <div class="grid grid-cols-[1fr_1fr_1fr_1fr] gap-3 text-xs lg:col-start-2 lg:row-start-2 xl:grid-cols-[1fr_1fr_1fr_1fr_1fr]">
+		    	{stack.map((item) => (
+		    		<article class="w-full text-title flex flex-col items-center gap-2 py-2 bg-black rounded-xl shadow-md shadow-black border border-border/30 group overflow-hidden relative">
+		    			<img src={item.img} class="w-10 h-10 rounded lg:scale-130 lg:translate-y-3 group-hover:translate-y-0 group-hover:scale-100 duration-300" alt={item.name}/>
+		    		  <span class="lg:opacity-0 group-hover:opacity-100 duration-200 cursor-default">{item.name}</span>
+			  			<span class="absolute -translate-y-12 group-hover:translate-y-0 duration-300 h-30 bg-white/10 z-10 w-40 rotate-30 -top-20 -right-20"/>
+		    		</article>
+		    	))}
+        </div>
+			</div>
+
+			<!-- professional experience -->
+			<div class="flex flex-col gap-3 bg-black/50 p-4 backdrop-blur-sm rounded-xl shadow-md shadow-black/50">
+			  <p class="text-yellow-neon text-xl lg:scroll-mt-16 italic" id="projects">Professional Experience</p>
+			  <div class="flex justify-between items-center">
+			  	<div class="flex flex-col gap-2">
+			  		<p class="text-title">ForIt Software Factory</p>
+			  	  <p class="text-title/90 italic">Full Stack Developer</p>
+		        <p>August 2025 - Present</p>
+			  	</div>
+			  	<Image src={forit} alt="ForIt Software Factory" class="h-20 w-25 object-cover rounded-xl border border-border/30 shadow-md shadow-black"/>
+			  </div>
+		    <ul class="relative z-10 bg-black/80 backdrop-blur-sm p-5 rounded-2xl border border-border/40 shadow-lg shadow-black/60 space-y-2 text-title/90">
+          <p class="text-title font-semibold text-lg mb-1">Project Overview</p>
+          <p class="text-sm text-title/80">
+            Currently contributing to the development of a multi-tenant employment service platform for <span class="text-yellow-neon font-medium">AMIA</span>.
+          </p>
+          <li class="flex gap-2 items-start">
+            <span class="text-yellow-neon mt-0.5">●</span>
+            <span>Participating in all stages of the development cycle applying <span class="font-medium">TDD</span>, clean architecture, and industry best practices.</span>
+          </li>
+          <li class="flex gap-2 items-start">
+            <span class="text-yellow-neon mt-0.5">●</span>
+            <span>Implemented RESTful endpoints and domain use cases using <span class="font-medium">TypeORM</span> within a monorepo integrating React, Node.js, Express, and TypeScript.</span>
+          </li>
+          <li class="flex gap-2 items-start">
+            <span class="text-yellow-neon mt-0.5">●</span>
+            <span>Collaborated in an agile team to deliver scalable, maintainable, and high-performance solutions.</span>
+          </li>
+        </ul>
+			  <div class="flex flex-wrap gap-2">
+		    	{['React', 'Node.js', 'Express', 'TypeScript', 'Vitest', 'Tailwind CSS', 'Storybook', 'Vite', 'TypeORM', 'GitHub'].map((item) => (
+		    		<span class="bg-black px-2 rounded-xl border border-border/30 shadow-md shadow-black py-0.5 z-10 text-title cursor-default">{item}</span>
+		    	))}
+		    </div>
+			</div>
   
 		  <!-- my projects -->
-		  <p class="text-yellow-neon mt-20 text-xl lg:scroll-mt-16 italic" id="projects">Projects</p>
-		  <p class="text-title">KEY TO DREAM</p>
-		  <div class="flex justify-between items-center">
-		  	<p>May 2025 (8 month of work)</p>
-		  	<a href="https://github.com/Alexrulu/keytodream2" target="_blank" 
-				  class="bg-surface rounded-xl py-1 px-2 flex gap-1 text-title hover:text-yellow-neon duration-200 z-10">
-		  		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-		  		Repo
-		  	</a>
-		  </div>
-			<a href="https://keytodream.vercel.app/" target="_blank" class="z-10">
-		    <Image src={keytodream} class="w-full rounded-xl lg:brightness-50 hover:brightness-100 duration-300 cursor-pointer" alt="keytodream project">
-			</a>
-		  <div class="flex flex-wrap gap-2">
-		  	{['React', 'Tailwind', 'Motion', 'Threejs', 'Expressjs', 'Nodejs', 'MySQL', 'Git'].map((item) => (
-		  		<span class="bg-black px-2 rounded-xl border border-border/30 shadow-md shadow-black py-0.5 z-10 text-title cursor-default">{item}</span>
-		  	))}
-		  </div>
-		  <p class="relative z-10 bg-black/90 p-3 rounded-xl mr-auto text-title/80 border-border/30 border shadow-md shadow-black">
-		  	Key to Dream is a full-stack web application I developed for the final presentation of a one-year course. I completely rebuilt my own legacy version from scratch, using advanced tools like Tailwind, Framer Motion, and Three.js to enhance design and performance. The app features full CRUD functionality, showcasing both my core skills and initiative.
-		  </p>
+		  <div class="flex flex-col gap-3 bg-black/50 p-4 backdrop-blur-sm rounded-xl shadow-md shadow-black/50">
+		    <p class="text-yellow-neon text-xl lg:scroll-mt-16 italic" id="projects">Projects</p>
+		    <p class="text-title">KEY TO DREAM</p>
+		    <div class="flex justify-between items-center">
+		    	<p>May 2025 (8 month of work)</p>
+		    	<a href="https://github.com/Alexrulu/keytodream2" target="_blank" 
+			  	  class="bg-surface rounded-xl py-1 px-2 flex gap-1 text-title hover:text-yellow-neon duration-200 z-10">
+		    		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+		    		Repo
+		    	</a>
+		    </div>
+			  <a href="https://keytodream.vercel.app/" target="_blank" class="z-10">
+		      <Image src={keytodream} class="w-full rounded-xl lg:brightness-50 hover:brightness-100 duration-300 cursor-pointer" alt="keytodream project">
+			  </a>
+		    <p class="relative z-10 bg-black/80 p-3 rounded-xl mr-auto text-title/80 border-border/30 border shadow-md shadow-black backdrop-blur-sm">
+		    	Key to Dream is a full-stack web application I developed for the final presentation of a one-year course. I completely rebuilt my own legacy version from scratch, using advanced tools like Tailwind, Framer Motion, and Three.js to enhance design and performance. The app features full CRUD functionality, showcasing both my core skills and initiative.
+		    </p>
+				<div class="flex flex-wrap gap-2">
+		    	{['React', 'Tailwind', 'Motion', 'Threejs', 'Expressjs', 'Nodejs', 'MySQL', 'Git'].map((item) => (
+		    		<span class="bg-black px-2 rounded-xl border border-border/30 shadow-md shadow-black py-0.5 z-10 text-title cursor-default">{item}</span>
+		    	))}
+		    </div>
+			</div>
   
 		  <!-- contact -->
-		  <form class="bg-black/90 z-10 flex flex-col gap-3 border border-border/30 shadow-md shadow-black rounded-xl p-4 my-20 lg:scroll-mt-16 lg:gap-5"
+		  <form class="bg-black/80 z-10 flex flex-col gap-3 border backdrop-blur-sm border-border/30 shadow-md shadow-black rounded-xl p-4 mb-20 lg:scroll-mt-16 lg:gap-5"
 		           id="contact-form"
            action="https://formspree.io/f/mqaqovyp"
            method="POST">
@@ -147,7 +188,7 @@ const stack = [
           <textarea class="bg-surface border border-border rounded-lg w-full py-1 px-2 outline-none" 
 		  		    placeholder="Feel free to outline your ideas or needs..." maxlength="500" name="message" required></textarea>
         </div>
-        <button type="submit" class="bg-white rounded-lg text-black py-2 cursor-pointer active:translate-y-2 duration-100">Submit</button>
+        <button type="submit" class="bg-yellow-neon rounded-lg text-black py-2 cursor-pointer active:translate-y-2 duration-100">Submit</button>
       </form>
 		</div>
 
